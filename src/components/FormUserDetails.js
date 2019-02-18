@@ -18,6 +18,7 @@ export class FormUserDetails extends Component {
           <TextField
             hintText="Enter Your First Name"
             floatingLabelText="First Name"
+            name="firstName"
             onChange={handleChange}
             defaultValue={values.firstName}
           />
@@ -25,6 +26,7 @@ export class FormUserDetails extends Component {
           <TextField
             hintText="Enter Your Last Name"
             floatingLabelText="Last Name"
+            name="lastName"
             onChange={handleChange}
             defaultValue={values.lastName}
           />
@@ -32,6 +34,7 @@ export class FormUserDetails extends Component {
           <TextField
             hintText="Enter Your email"
             floatingLabelText="Email"
+            name="email"
             onChange={handleChange}
             defaultValue={values.email}
           />
@@ -39,7 +42,7 @@ export class FormUserDetails extends Component {
           <RaisedButton
             label="Continue"
             primary={true}
-            style={StyleSheet.button}
+            style={styles.button}
             onClick={this.continue}
           />
         </React.Fragment>
@@ -48,4 +51,9 @@ export class FormUserDetails extends Component {
   }
 }
 
+const styles = {
+  button: {
+    margin: 15
+  }
+};
 export default FormUserDetails;
